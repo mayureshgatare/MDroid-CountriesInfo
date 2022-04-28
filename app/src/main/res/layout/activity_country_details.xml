@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".ui.CountryDetailsActivity">
+
+        <LinearLayout
+            android:id="@+id/llHeaderDetail"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/teal_700"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin_five"
+                android:text="@string/known_facts_about"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/txtCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgEmblem"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/llHeaderDetail"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_five"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:padding="@dimen/margin_ten"
+            android:src="@android:drawable/presence_offline" />
+
+        <TextView
+            android:id="@+id/txtEmblem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgEmblem"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:gravity="center"
+            android:text="Official emblem"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llAdditionalHeaderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txtEmblem"
+            android:background="@color/teal_700"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCapital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/margin_five"
+                android:text="@string/country_capital"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llDescriptionDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llAdditionalHeaderDetails"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_weight="0.5"
+                android:background="@android:color/white"
+                android:padding="@dimen/margin_five"
+                app:cardCornerRadius="@dimen/margin_twenty"
+                app:cardElevation="@dimen/margin_ten">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDescriptionTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@color/teal_700"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_five"
+                        android:text="Description"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_size_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDescriptionDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:padding="@dimen/margin_ten"
+                        android:text="@string/country_description_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_small" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewDemographic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_weight="0.5"
+                android:background="@android:color/white"
+                android:padding="@dimen/margin_five"
+                app:cardCornerRadius="@dimen/margin_twenty"
+                app:cardElevation="@dimen/margin_ten">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDemographyTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/teal_700"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_five"
+                        android:text="Demography"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_size_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDemographyDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:padding="@dimen/margin_ten"
+                        android:text="@string/country_demography_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_small" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llDescriptionDetails"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGoogleMap"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_fifteen"
+                android:text="View on Google map"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small"
+                app:cornerRadius="8dp"
+                app:rippleColor="#33AAAAAA"
+                app:strokeColor="@color/teal_700"
+                app:strokeWidth="2dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+

@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_five">5dp</dimen>
+    <dimen name="margin_ten">10dp</dimen>
+    <dimen name="margin_fifteen">15dp</dimen>
+    <dimen name="margin_twenty">20dp</dimen>
+    <dimen name="margin_twenty_five">25dp</dimen>
+
+    <!--font sizes-->
+    <dimen name="font_size_small">15sp</dimen>
+    <dimen name="font_size_medium">17sp</dimen>
+    <dimen name="font_size_large">18sp</dimen>
+    <dimen name="font_size_title">20sp</dimen>
+    <dimen name="font_size_description">22sp</dimen>
+    <dimen name="font_size_body">24sp</dimen>
+    <dimen name="font_size_header">25sp</dimen>
+
+</resources>

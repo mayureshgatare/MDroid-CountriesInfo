@@ -1,0 +1,13 @@
+<resources>
+        <string name="app_name">CountriesInfo-MDroid</string>
+    <string name="title_activity_country_details">CountryDetailsActivity</string>
+    <string name="known_facts_about">Known facts about</string>
+    <string name="country_capital">Capital is %1$s</string>
+    <string name="country_description_text">%1$s, officially %2$s is a country in %3$s region with %4$s being the subregion.</string>
+    <string name="country_demography_text">%1$s has a total area of %2$s km2 and a total population of %3$s.\n\nThe vehicle driving is on the %4$s side of the road.</string>
+
+<!--    <string name="known_facts_population">Population : %1$s</string>
+    <string name="known_facts_area">Area : %1$s</string>
+    <string name="known_facts_">Population : %1$s</string>-->
+
+</resources>
