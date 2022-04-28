@@ -10,6 +10,10 @@ import com.mdroid.countriesinfo.R
 import com.mdroid.countriesinfo.databinding.ActivityCountryDetailsBinding
 import com.mdroid.countriesinfo.model.CountriesModel
 
+/**
+ * Activity to show the details of an selected country
+ * @author MayuR
+ */
 
 class CountryDetailsActivity : AppCompatActivity() {
 
@@ -18,8 +22,6 @@ class CountryDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_country_details)
-
         getDataFromBundle()
         initViews()
         setDataOnUI()
@@ -68,12 +70,10 @@ class CountryDetailsActivity : AppCompatActivity() {
             binding.txtDemographyDetails.text = demographicText
             binding.txtCountryName.text = countriesModel.name.common
             binding.txtCapital.text = capital
-            //binding.txtTextTwo.text = countriesModel.name.official
 
             if (null!=countriesModel.coatOfArms.png) {
-                //For the countries emblem
+                //For a country's emblem
                 Glide.with(this@CountryDetailsActivity).load(Uri.parse(countriesModel.coatOfArms.png)).into(binding.imgEmblem)
-
             }
 
             binding.btnGoogleMap.setOnClickListener (View.OnClickListener {

@@ -17,6 +17,11 @@ import com.mdroid.countriesinfo.utils.NetworkUtils
 import com.mdroid.countriesinfo.viewmodel.BaseViewModelFactory
 import com.mdroid.countriesinfo.viewmodel.CountriesViewModel
 
+/**
+ * Main activity or HomeScreen activity for showing all the countries
+ * @author MayuR
+ */
+
 class AllCountriesActivity : AppCompatActivity() {
     lateinit var viewModel: CountriesViewModel
     lateinit var countriesAdapter: CountriesAdapter
@@ -39,10 +44,7 @@ class AllCountriesActivity : AppCompatActivity() {
         val retrofitService = RetroAPIInterface.getInstance()
         val mainRepository = CountriesRepository(retrofitService)
 
-        viewModel = ViewModelProvider(
-            this,
-            BaseViewModelFactory(mainRepository)
-        ).get(CountriesViewModel::class.java)
+        viewModel = ViewModelProvider(this, BaseViewModelFactory(mainRepository)).get(CountriesViewModel::class.java)
         viewModel.countriesList.observe(this) { it ->
             val list: List<CountriesModel> = it.sortedBy { it.name.common }
             countriesAdapter.setCountries(list)

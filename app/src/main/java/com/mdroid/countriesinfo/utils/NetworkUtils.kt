@@ -6,6 +6,11 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Build
 
+/***
+ * An utility class for multiple methods for checking the wifi/mobile network connection
+ *
+ * @author MayuR
+ */
 object NetworkUtils {
     fun isConnected(context: Context): Boolean {
         val connMgr = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

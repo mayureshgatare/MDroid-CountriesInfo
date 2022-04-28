@@ -9,6 +9,10 @@ import com.mdroid.countriesinfo.databinding.AdapterCountryRowBinding
 import com.mdroid.countriesinfo.model.CountriesModel
 import com.mdroid.countriesinfo.utils.ValidationUtil
 
+/**
+ * An Adapter class for showing the list of countries in a card view
+ * @author MayuR
+ */
 class CountriesAdapter(private val onClickListener: OnClickListener) : RecyclerView.Adapter<PlacesViewHolder>() {
 
     var countriesList = mutableListOf<CountriesModel>()
